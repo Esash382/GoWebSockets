@@ -94,6 +94,7 @@ func (vc *VClient) GetTransmissionNr(components []string) (VinculumMsg, error) {
 		if err != nil {
 			return VinculumMsg{}, errors.New("Vinculum is Not connected ")
 		}
+		vc.IsRunning = true
 	}
 
 	reqId := rand.Intn(1000)
